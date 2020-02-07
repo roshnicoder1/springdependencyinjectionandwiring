@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                
+                
+<bean id="g1" class="org.ibm.core.Greet">
+<property name="message" value="welcome to spring">
+</property>
+</bean>
+
+<!-- <bean id="g2" class="org.ibm.core.Customer">
+<property name="id" value="1"></property>
+<property name="name" value="Roshni"></property>
+<property name="orderValue" value="5000.0"></property>
+</bean> -->
+
+
+<!-- <bean id="g3" class="org.ibm.core.Customer">
+<constructor-arg value="10001" type="int" />
+<constructor-arg value="Roshni" type="String" />
+<constructor-arg value="2300.78" type="float" />
+</bean> -->
+
+<bean id="g4" class="org.ibm.core.Customer">
+<property name="id" value="1"></property>
+<property name="name" value="Roshni"></property>
+<property name="orderValue" value="1000.34"></property>
+
+<property name="orders">
+
+ <list>
+ <value>Soap</value>
+ <value>Shampoo</value>
+ <value>Detergent</value>
+ <value>Conditioner</value>
+ 
+ </list>
+ 
+ 
+ </property>
+ </bean>
+
+<!-- </bean>
+<bean id="g5" class="org.ibm.core.Person" autowire="byName">
+<property name="pName" value="Roshni"></property>
+
+</bean>
+
+<bean id="ad" class="org.ibm.core.Address">
+<property name="area" value="patna"></property>
+<property name="city" value="begusarai"></property>
+
+</bean> -->
+
+<!-- </bean>
+<bean id="g6" class="org.ibm.core.Employee" autowire="byType">
+<property name="eName" value="Roshni"></property>
+
+</bean>
+
+<bean class="org.ibm.core.Address">
+<property name="area" value="patna"></property>
+<property name="city" value="begusarai"></property>
+
+</bean> -->
+
+
+
+
+<!-- <bean id="g6" class="org.ibm.core.Employee">
+	<constructor-arg value="hitesh" type="String"></constructor-arg>
+	<constructor-arg>
+		<ref bean="ad"/>
+	</constructor-arg>
+	
+
+</bean>
+
+<bean id="ad" class="org.ibm.core.Address">
+	<property name="area" value="patna"></property>
+	<property name="city" value="begusarai"></property>
+</bean> -->
+
+<bean id="g6" class="org.ibm.core.Employee" autowire="constructor">
+	<constructor-arg value="hitesh" type="String"></constructor-arg>
+	
+	</bean>
+
+<bean id="ad" class="org.ibm.core.Address">
+	<property name="area" value="patna"></property>
+	<property name="city" value="begusarai"></property>
+</bean>
+
+
+
+
+               
+               
+ </beans>
